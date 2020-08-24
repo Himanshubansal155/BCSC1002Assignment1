@@ -11,14 +11,16 @@ public class Book {
     private String authorName;
     private String ISBNNumber;
 
-    public Book(){
+    public Book() {
         this.bookName = "oops";
         this.authorName = "hb";
         this.ISBNNumber = "1234567890123";
     }
-    public Book(String bookName){
+
+    public Book(String bookName) {
         this.bookName = bookName;
     }
+
     public String getBookName() {
         return bookName;
     }
@@ -45,22 +47,21 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book Name: " + getBookName() + ", " +
-        "Author Name: " + getAuthorName() + ", " +
-        "ISBN Number: " + getISBNNumber() + ".";
+        return "Book Name: " + getBookName() + ", " + "Author Name: " + getAuthorName() + ", " + "ISBN Number: "
+                + getISBNNumber() + ".";
     }
+
     @Override
     public boolean equals(Object o) {
-        if (this == o) { 
+        if (this == o) {
             return true;
         }
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
         Book book = (Book) o;
-        return getAuthorName() == book.getAuthorName() &&
-                getISBNNumber() == book.getISBNNumber() &&
-                Objects.equals(getBookName(), book.getBookName());
+        return getAuthorName() == book.getAuthorName() && getISBNNumber() == book.getISBNNumber()
+                && Objects.equals(getBookName(), book.getBookName());
     }
 
     @Override
