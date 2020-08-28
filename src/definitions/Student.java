@@ -13,6 +13,15 @@ public class Student {
     private int noOfBookIssued;
     private Book[] booksStore;
 
+    public Student(){
+        this.nameOfStudent = "Himanshu";
+        this.universityRollNumber = 191500341;
+        this.noOfBookIssued = 3;
+        this.booksStore = new Book[3];
+        for (int i = 0; i < booksStore.length; i++) {
+            booksStore[i] = new Book();
+        }
+    }
     public String getNameOfStudent() {
         return nameOfStudent;
     }
