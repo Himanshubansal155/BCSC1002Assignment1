@@ -9,15 +9,17 @@ import java.util.Arrays;
 public class Library {
     private Book[] booksAvailable;
 
-    public Library(){
+    public Library() {
         this.booksAvailable = new Book[10];
         for (int i = 0; i < booksAvailable.length; i++) {
             booksAvailable[i] = new Book();
         }
     }
-    public Library(Book[] booksAvailable){
+
+    public Library(Book[] booksAvailable) {
         this.booksAvailable = booksAvailable;
     }
+
     public Book[] getBooksAvailable() {
         return booksAvailable;
     }
@@ -48,12 +50,4 @@ public class Library {
         return Arrays.hashCode(getBooksAvailable());
     }
 
-    /**
-     * This method will print all the Books present in library.
-     */
-    public void listBooks(){
-        for (Book book : this.booksAvailable) {
-            System.out.println(book);
-        }
-    }
 }

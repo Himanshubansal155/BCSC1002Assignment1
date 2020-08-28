@@ -6,7 +6,7 @@ package execution;
 
 import java.util.Scanner;
 
-import definitions.Library;
+import definitions.Student;
 
 public class FrontDesk {
     private static final int ISSUE_BOOK = 1;
@@ -17,7 +17,9 @@ public class FrontDesk {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int customerInput;
-        Library library = new Library();
+        Student studentInfo = new Student();
+        String bookName;
+        String authorName;
         do {
             System.out.print("-=-=--=-=-");
             System.out.print("Welcome To The Front Desk");
@@ -32,15 +34,20 @@ public class FrontDesk {
                 case ISSUE_BOOK:
                     System.out.println("Enter the name of the Book you want to issue: ");
                     scanner.nextLine();
+                    bookName = scanner.nextLine();
+                    authorName = scanner.nextLine();
+                    studentInfo.issueBook(bookName, authorName);
                     break;
-                case RETURN_BOOK:
+                    case RETURN_BOOK:
                     System.out.println("Enter the name of the Book you want to return: ");
                     scanner.nextLine();
+                    bookName = scanner.nextLine();
+                    authorName = scanner.nextLine();
+                    studentInfo.returnBook(bookName, authorName);
                     break;
                 case SHOW_ALL_BOOKS:
-                    System.out.println("All The Books present in library are: ");
+                    System.out.println("All The Books Issued are: ");
                     scanner.nextLine();
-                    library.listBooks();
                     break;
                 default:
                     break;

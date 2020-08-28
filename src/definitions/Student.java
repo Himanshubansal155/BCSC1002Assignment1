@@ -88,4 +88,18 @@ public class Student {
         return Objects.hash(getNameOfStudent(), getUniversityRollNumber(), getNoOfBookIssued())
                 + Arrays.hashCode(getBooksStore());
     }
+
+    public void issueBook(String bookName, String authorName){
+        int booksCount = getNoOfBookIssued();
+        booksCount = booksCount + 1;
+        setNoOfBookIssued(booksCount);
+        System.out.println("Book " + bookName + " author " + authorName + "Issued");
+    }
+
+    public void returnBook(String bookName, String authorName){
+        int booksCount = getNoOfBookIssued();
+        booksCount = booksCount - 1;
+        setNoOfBookIssued(booksCount);
+        System.out.println("Book " + bookName + " author " + authorName + "Returned");
+    }
 }
