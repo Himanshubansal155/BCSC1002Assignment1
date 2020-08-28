@@ -17,8 +17,10 @@ public class Book {
         this.ISBNNumber = "1234567890123";
     }
 
-    public Book(String bookName) {
+    public Book(String bookName, String authorName, String ISBNNumber) {
         this.bookName = bookName;
+        this.authorName = authorName;
+        this.ISBNNumber = ISBNNumber;
     }
 
     public String getBookName() {

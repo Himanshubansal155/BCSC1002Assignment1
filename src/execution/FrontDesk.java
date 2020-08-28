@@ -20,6 +20,7 @@ public class FrontDesk {
         Student studentInfo = new Student();
         String bookName;
         String authorName;
+        String ISBNNumber;
         do {
             System.out.print("-=-=--=-=-");
             System.out.print("Welcome To The Front Desk");
@@ -37,15 +38,19 @@ public class FrontDesk {
                     bookName = scanner.nextLine();
                     System.out.println("Enter Author Name");
                     authorName = scanner.nextLine();
-                    studentInfo.issueBook(bookName, authorName);
+                    System.out.println("Enter ISBN Number of Book");
+                    ISBNNumber = scanner.nextLine();
+                    studentInfo.issueBook(bookName, authorName, ISBNNumber);
                     break;
-                    case RETURN_BOOK:
+                case RETURN_BOOK:
                     System.out.println("Enter the name of the Book you want to return: ");
                     scanner.nextLine();
                     bookName = scanner.nextLine();
                     System.out.println("Enter Author Name");
                     authorName = scanner.nextLine();
-                    studentInfo.returnBook(bookName, authorName);
+                    System.out.println("Enter ISBN Number of Book");
+                    ISBNNumber = scanner.nextLine();
+                    studentInfo.returnBook(bookName, authorName, ISBNNumber);
                     break;
                 case SHOW_ALL_BOOKS:
                     System.out.println("All The Books Issued are: ");

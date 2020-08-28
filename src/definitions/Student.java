@@ -16,8 +16,8 @@ public class Student {
     public Student() {
         this.nameOfStudent = "Himanshu";
         this.universityRollNumber = 191500341;
-        this.noOfBookIssued = 3;
-        this.booksStore = new Book[3];
+        this.noOfBookIssued = getNoOfBookIssued();
+        this.booksStore = new Book[getNoOfBookIssued()];
         for (int i = 0; i < booksStore.length; i++) {
             booksStore[i] = new Book();
         }
@@ -96,11 +96,14 @@ public class Student {
      * @param authorName The Author's name of the new book to be added to the
      *                   student data.
      */
-    public void issueBook(String bookName, String authorName) {
+    public void issueBook(String bookName, String authorName, String ISBNNumber) {
         int booksCount = getNoOfBookIssued();
         booksCount = booksCount + 1;
+        System.out.println(booksCount);
         setNoOfBookIssued(booksCount);
-        System.out.println("Book " + bookName + " author " + authorName + " Issued\n");
+        this.booksStore = new Book[getNoOfBookIssued()];
+        booksStore[getNoOfBookIssued() - 1] = new Book(bookName, authorName, ISBNNumber);
+        System.out.println("Book " + bookName + " author " + authorName + " have ISBN  " + ISBNNumber + " Issued\n");
     }
 
     /**
@@ -109,13 +112,17 @@ public class Student {
      * @param bookName   The name of the book to be returned.
      * @param authorName The Author's name of the book to be returned.
      */
-    public void returnBook(String bookName, String authorName) {
+    public void returnBook(String bookName, String authorName, String ISBNNumber) {
         int booksCount = getNoOfBookIssued();
         booksCount = booksCount - 1;
         setNoOfBookIssued(booksCount);
-        System.out.println("Book " + bookName + " author " + authorName + " Returned\n");
+        System.out.println("Book " + bookName + " author " + authorName + " have ISBN " + ISBNNumber + " Returned\n");
     }
-    public void showIssuedBooks(){
+
+    /**
+     * This Method will show all the books issued by student
+     */
+    public void showIssuedBooks() {
         for (Book book : booksStore) {
             System.out.println(book);
         }
