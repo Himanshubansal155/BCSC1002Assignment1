@@ -89,17 +89,35 @@ public class Student {
                 + Arrays.hashCode(getBooksStore());
     }
 
-    public void issueBook(String bookName, String authorName){
+    /**
+     * This method will allow us to add a new Book to our student data.
+     *
+     * @param bookName   The name of the new book to be added to the student data.
+     * @param authorName The Author's name of the new book to be added to the
+     *                   student data.
+     */
+    public void issueBook(String bookName, String authorName) {
         int booksCount = getNoOfBookIssued();
         booksCount = booksCount + 1;
         setNoOfBookIssued(booksCount);
-        System.out.println("Book " + bookName + " author " + authorName + "Issued");
+        System.out.println("Book " + bookName + " author " + authorName + " Issued\n");
     }
 
-    public void returnBook(String bookName, String authorName){
+    /**
+     * This method will allow us to return a book.
+     *
+     * @param bookName   The name of the book to be returned.
+     * @param authorName The Author's name of the book to be returned.
+     */
+    public void returnBook(String bookName, String authorName) {
         int booksCount = getNoOfBookIssued();
         booksCount = booksCount - 1;
         setNoOfBookIssued(booksCount);
-        System.out.println("Book " + bookName + " author " + authorName + "Returned");
+        System.out.println("Book " + bookName + " author " + authorName + " Returned\n");
+    }
+    public void showIssuedBooks(){
+        for (Book book : booksStore) {
+            System.out.println(book);
+        }
     }
 }

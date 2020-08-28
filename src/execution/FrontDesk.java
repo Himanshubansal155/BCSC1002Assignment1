@@ -35,6 +35,7 @@ public class FrontDesk {
                     System.out.println("Enter the name of the Book you want to issue: ");
                     scanner.nextLine();
                     bookName = scanner.nextLine();
+                    System.out.println("Enter Author Name");
                     authorName = scanner.nextLine();
                     studentInfo.issueBook(bookName, authorName);
                     break;
@@ -42,12 +43,13 @@ public class FrontDesk {
                     System.out.println("Enter the name of the Book you want to return: ");
                     scanner.nextLine();
                     bookName = scanner.nextLine();
+                    System.out.println("Enter Author Name");
                     authorName = scanner.nextLine();
                     studentInfo.returnBook(bookName, authorName);
                     break;
                 case SHOW_ALL_BOOKS:
                     System.out.println("All The Books Issued are: ");
-                    scanner.nextLine();
+                    studentInfo.showIssuedBooks();
                     break;
                 default:
                     break;
