@@ -29,7 +29,7 @@ public class Student {
         this.noOfBookIssued = noOfBookIssued;
     }
     public Book[] getBooksStore() {
-        return booksStore;
+        return booksStore.clone();
     }
     public void setBooksStore(Book[] booksStore) {
         this.booksStore = booksStore;
