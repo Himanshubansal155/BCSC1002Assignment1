@@ -24,6 +24,23 @@ public class FrontDesk {
             System.out.println("2. Return a previously issues book for me.");
             System.out.println("3. Show me all my issues books.");
             System.out.println("4. Exit.");
+            customerInput = scanner.nextInt();
+            switch (customerInput) {
+                case ISSUE_BOOK:
+                    System.out.println("Enter the name of the video you want to add: ");
+                    scanner.nextLine();
+                    break;
+                case RETURN_BOOK:
+                    System.out.println("Enter the name of the video you want to return: ");
+                    scanner.nextLine();
+                    break;
+                case SHOW_ALL_BOOKS:
+                    System.out.println("Enter the name of the video you want to return: ");
+                    scanner.nextLine();
+                    break;
+                default:
+                    break;
+            }
         } while (customerInput != EXIT);
     }
 }
