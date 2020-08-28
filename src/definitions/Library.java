@@ -31,4 +31,8 @@ public class Library {
         Library library = new Library();
         return Arrays.equals(getBooksAvailable(), library.getBooksAvailable());
     }
+    @Override
+    public int hashCode() {
+        return.Arrays.hashCode(getBooksAvailable());
+    }
 }
