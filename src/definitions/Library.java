@@ -47,4 +47,13 @@ public class Library {
     public int hashCode() {
         return Arrays.hashCode(getBooksAvailable());
     }
+
+    /**
+     * This method will print all the Books present in library.
+     */
+    public void listBooks(){
+        for (Book book : this.booksAvailable) {
+            System.out.println(book);
+        }
+    }
 }
