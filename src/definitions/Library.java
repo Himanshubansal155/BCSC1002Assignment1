@@ -8,9 +8,11 @@ import java.util.Arrays;
 
 public class Library {
     private Book[] booksAvailable;
+
     public Book[] getBooksAvailable() {
         return booksAvailable;
     }
+
     public void setBooksAvailable(Book[] booksAvailable) {
         this.booksAvailable = booksAvailable;
     }
@@ -19,7 +21,7 @@ public class Library {
     public String toString() {
         return Arrays.toString(booksAvailable);
     }
-    
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -31,8 +33,9 @@ public class Library {
         Library library = new Library();
         return Arrays.equals(getBooksAvailable(), library.getBooksAvailable());
     }
+
     @Override
     public int hashCode() {
-        return.Arrays.hashCode(getBooksAvailable());
+        return Arrays.hashCode(getBooksAvailable());
     }
 }
