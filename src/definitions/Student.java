@@ -23,7 +23,10 @@ public class Student {
         }
     }
 
-    public Student(Book[] booksStore){
+    public Student(String nameOfStudent, long universityRollNumber, int noOfBookIssued, Book[] booksStore){
+        this.nameOfStudent = nameOfStudent;
+        this.universityRollNumber = universityRollNumber;
+        this.noOfBookIssued = noOfBookIssued;
         this.booksStore = booksStore;
     }
     public String getNameOfStudent() {

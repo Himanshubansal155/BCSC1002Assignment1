@@ -4,8 +4,11 @@
 
 package execution;
 
+import definitions.Library;
+
 public class FrontDesk {
     public static void main(String[] args) {
-        
+        Library library = new Library();
+        library.getBooksAvailable();
     }
 }

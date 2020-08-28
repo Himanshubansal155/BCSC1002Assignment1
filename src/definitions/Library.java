@@ -4,6 +4,31 @@
 
 package definitions;
 
+import java.util.Arrays;
+
 public class Library {
     private Book[] booksAvailable;
+    public Book[] getBooksAvailable() {
+        return booksAvailable;
+    }
+    public void setBooksAvailable(Book[] booksAvailable) {
+        this.booksAvailable = booksAvailable;
+    }
+
+    @Override
+    public String toString() {
+        return Arrays.toString(booksAvailable);
+    }
+    
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Library library = new Library();
+        return Arrays.equals(getBooksAvailable(), library.getBooksAvailable());
+    }
 }
