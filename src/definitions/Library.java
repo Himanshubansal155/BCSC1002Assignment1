@@ -9,6 +9,12 @@ import java.util.Arrays;
 public class Library {
     private Book[] booksAvailable;
 
+    public Library(){
+        this.booksAvailable = new Book[10];
+        for (int i = 0; i < booksAvailable.length; i++) {
+            booksAvailable[i] = new Book();
+        }
+    }
     public Book[] getBooksAvailable() {
         return booksAvailable;
     }
