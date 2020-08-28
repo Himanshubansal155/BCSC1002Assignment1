@@ -22,6 +22,10 @@ public class Student {
             booksStore[i] = new Book();
         }
     }
+
+    public Student(Book[] booksStore){
+        this.booksStore = booksStore;
+    }
     public String getNameOfStudent() {
         return nameOfStudent;
     }
