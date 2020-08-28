@@ -5,6 +5,7 @@
 package definitions;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class Student {
     private String nameOfStudent;
@@ -36,7 +37,7 @@ public class Student {
         this.noOfBookIssued = noOfBookIssued;
     }
 
-    public Book[] getBooksStore() {k
+    public Book[] getBooksStore() {
         return booksStore.clone();
     }
 
@@ -48,5 +49,26 @@ public class Student {
     public String toString() {
         return "Student Name: " + nameOfStudent + "University RollNumber: " + universityRollNumber
                 + "No. of Books Issued: " + noOfBookIssued + "Issued Books: " + Arrays.toString(booksStore);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Student student = (Student) o;
+        return getUniversityRollNumber() == student.getUniversityRollNumber()
+                && getNoOfBookIssued() == student.getNoOfBookIssued()
+                && Objects.equals(getNameOfStudent(), student.getNameOfStudent())
+                && Arrays.equals(getBooksStore(), student.getBooksStore());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getNameOfStudent(), getUniversityRollNumber(), getNoOfBookIssued())
+                + Arrays.hashCode(getBooksStore());
     }
 }
