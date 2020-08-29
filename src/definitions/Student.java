@@ -120,7 +120,7 @@ public class Student {
      */
     public void showIssuedBooks() {
         for (Book book : booksStore) {
-            System.out.println(book);
+            System.out.println(book + "\n");
         }
     }
 }

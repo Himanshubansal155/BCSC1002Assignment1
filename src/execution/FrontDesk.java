@@ -26,9 +26,9 @@ public class FrontDesk {
             System.out.print("Welcome To The Front Desk");
             System.out.println("-=-=--=-=-");
             System.out.println("How may I help you today?");
-            System.out.println("1. Issue a new book for me.");
-            System.out.println("2. Return a previously issues book for me.");
-            System.out.println("3. Show me all my issues books.");
+            System.out.println("1. Issue a new book.");
+            System.out.println("2. Return a previously issues book.");
+            System.out.println("3. Show all my Issue books.");
             System.out.println("4. Exit.");
             customerInput = scanner.nextInt();
             switch (customerInput) {
