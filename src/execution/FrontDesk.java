@@ -53,7 +53,6 @@ public class FrontDesk {
                     studentInfo.returnBook(bookName, authorName, ISBNNumber);
                     break;
                 case SHOW_ALL_BOOKS:
-                    System.out.println("All The Books Issued are: ");
                     studentInfo.showIssuedBooks();
                     break;
                 default:

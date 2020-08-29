@@ -119,8 +119,13 @@ public class Student {
      * This Method will show all the books issued by student
      */
     public void showIssuedBooks() {
-        for (Book book : booksStore) {
-            System.out.println(book + "\n");
+        if(booksStore.length == 0){
+            System.out.println("No Book Issued");
         }
+        for (Book book : booksStore) {
+            System.out.println("All The Books Issued are: ");
+            System.out.println(book);
+        }
+        System.out.println();
     }
 }
