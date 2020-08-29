@@ -12,8 +12,8 @@ public class Book {
     private String ISBNNumber;
 
     public Book() {
-        this.bookName = "oops";
-        this.authorName = "hb";
+        this.bookName = "Object oriented Programming";
+        this.authorName = "Cay S. Horstmann";
         this.ISBNNumber = "1234567890123";
     }
 

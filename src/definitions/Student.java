@@ -99,7 +99,6 @@ public class Student {
     public void issueBook(String bookName, String authorName, String ISBNNumber) {
         int booksCount = getNoOfBookIssued();
         booksCount = booksCount + 1;
-        System.out.println(booksCount);
         setNoOfBookIssued(booksCount);
         this.booksStore = new Book[getNoOfBookIssued()];
         booksStore[getNoOfBookIssued() - 1] = new Book(bookName, authorName, ISBNNumber);
@@ -113,9 +112,6 @@ public class Student {
      * @param authorName The Author's name of the book to be returned.
      */
     public void returnBook(String bookName, String authorName, String ISBNNumber) {
-        int booksCount = getNoOfBookIssued();
-        booksCount = booksCount - 1;
-        setNoOfBookIssued(booksCount);
         System.out.println("Book " + bookName + " author " + authorName + " have ISBN " + ISBNNumber + " Returned\n");
     }
 
