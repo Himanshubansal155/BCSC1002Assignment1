@@ -28,11 +28,13 @@ public class Library {
         this.booksAvailable = booksAvailable;
     }
 
+    // toString() method
     @Override
     public String toString() {
         return Arrays.toString(booksAvailable);
     }
 
+    //equals and hashcode method
     @Override
     public boolean equals(Object o) {
         if (this == o) {
